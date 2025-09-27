@@ -34,12 +34,7 @@ const app = express();
 
 // ... (the rest of your server.js file is correct) ...
 app.use(express.json());
-
-// 👇 Updated CORS configuration to allow your frontend URL
-app.use(cors({
-  origin: "https://medilink-mu.vercel.app"
-}));
-
+app.use(cors());
 
 // Mount routers
 app.use("/api/v1/auth", authRoutes);
